@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="javascript" href="script.js">
+</head>
+
+<body>
+    <header>
+        <div><h1 text-align="center">MY PORTFOLIO</h1></div>
+      </header>
+    
+    <div> 
+        <img id="image" src="" class="pic" width="250" height="250">
+        <button type="button" onclick="document.getElementById('image').src='pic1.jpeg'">photo1</button>
+        <button type="button" onclick="document.getElementById('image').src='pic2.jpeg'">photo2</button>
+        <h2 class="bsize"><em >G S JAYASURYA</em></h2>
+        <br>
+        <br>
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="html.jpeg" style="width:50%">
+              <div class="text">html</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="css.jpeg" style="width:50%">
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="java.jpeg" style="width:50%">
+              <div class="text">Caption Three</div>
+            </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+            <script>let slideIndex = 0;
+                showSlides();
+                
+                function showSlides() {
+                  let i;
+                  let slides = document.getElementsByClassName("mySlides");
+                  let dots = document.getElementsByClassName("dot");
+                  for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                  }
+                  slideIndex++;
+                  if (slideIndex > slides.length) {slideIndex = 1}    
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                  }
+                  slides[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " active";
+                  setTimeout(showSlides, 2000); // Change image every 2 seconds
+                }</script>
+        <footer class="fc">
+            <p><h3> Author: jayasurya</h3></p>
+            <p> <span>contact us</span><br>
+                <a href="gsjayasurya2000@gmail.com" target="_blank">gsjayasurya2000@gmail.com</a></p>
+          </footer>    
+</body>
+</html>
